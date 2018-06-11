@@ -1,0 +1,1 @@
+docker run --name=face-comparison -it -p 8042:8042 rajesh:face_compare

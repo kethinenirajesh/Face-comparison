@@ -1,0 +1,11 @@
+FROM debian:stable-slim
+
+COPY ./requirements.txt /requirements.txt
+COPY ./Face_comparison.py /Face_comparison.py
+
+RUN apt-get clean && apt-get update && apt-get install -y python && apt-get install -y python-dev python-pip && pip install -r /requirements.txt
+
+
+EXPOSE 8042
+
+CMD ["python","/Face_comparison.py"]
