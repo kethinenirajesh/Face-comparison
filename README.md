@@ -1,5 +1,10 @@
 # Face-comparison
 
+# prerequisites
+1) Docker
+2) aws_access_key_id and aws_secret_access_key from AWS
+3) Replace "***" with aws_access_key_id and aws_secret_access_key in Face_comparison.py file.
+
 # Build docker image
 
 ./build-docker.sh
