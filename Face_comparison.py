@@ -6,6 +6,9 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+aws_access_key = "***"
+aws_secret_key = "***"
+
 
 time_out = 20
 
@@ -86,6 +89,6 @@ def query_method():
 if __name__ == '__main__':
     #start_aplication()
     print "start"
-    client = boto3.client('rekognition', region_name='us-west-2', aws_access_key_id="****",
-                          aws_secret_access_key="*****")
+    client = boto3.client('rekognition', region_name='us-west-2', aws_access_key_id=aws_access_key,
+                          aws_secret_access_key=aws_secret_key)
     app.run("0.0.0.0",8042)
